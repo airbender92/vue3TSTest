@@ -2,14 +2,15 @@
  * @Author: wangyunbo
  * @Date: 2021-09-18 15:14:31
  * @LastEditors: wangyunbo
- * @LastEditTime: 2021-09-18 16:52:10
+ * @LastEditTime: 2021-09-24 13:09:25
  * @FilePath: \my-vue3-project\src\components\items\ItemsList.component.vue
  * @Description: file content
 -->
 <template>
   <div>
-    <h3>Items:</h3>
-    <ul>
+    <h3>Items ---- loading: {{ loading }}:</h3>
+    <Loader v-show="loading" />
+    <ul v-show="!loading">
       <item-component
         v-for="item in items"
         :key="item.id"
@@ -23,13 +24,15 @@
 import { defineComponent, PropType } from "vue";
 import { ItemInterface } from "@/models/items/Item.interface";
 import ItemComponent from "./children/Item.component.vue";
+import Loader from "@/components/shared/Loader.component.vue";
 
 export default defineComponent({
-  components: { ItemComponent },
+  components: { ItemComponent, Loader },
   props: {
     items: {
       type: Array as PropType<ItemInterface[]>,
     },
+    loading: { type: Boolean },
   },
   setup() {
     const onItemSelect = (item: ItemInterface) => {

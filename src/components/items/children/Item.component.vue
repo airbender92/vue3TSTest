@@ -2,13 +2,13 @@
  * @Author: wangyunbo
  * @Date: 2021-09-18 16:17:17
  * @LastEditors: wangyunbo
- * @LastEditTime: 2021-09-18 17:05:49
+ * @LastEditTime: 2021-09-24 14:23:46
  * @FilePath: \my-vue3-project\src\components\items\children\Item.component.vue
  * @Description: file content
 -->
 <template>
   <li :class="css" @click="onClick">
-    <div class="selected-indicator"></div>
+    <div class="selected-indicator">{{ model.selected ? "√" : "" }}</div>
     <div class="name">{{ model.name }}</div>
   </li>
 </template>

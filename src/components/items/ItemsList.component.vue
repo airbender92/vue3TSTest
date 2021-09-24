@@ -2,7 +2,7 @@
  * @Author: wangyunbo
  * @Date: 2021-09-18 15:14:31
  * @LastEditors: wangyunbo
- * @LastEditTime: 2021-09-24 13:09:25
+ * @LastEditTime: 2021-09-24 14:12:32
  * @FilePath: \my-vue3-project\src\components\items\ItemsList.component.vue
  * @Description: file content
 -->
@@ -34,10 +34,9 @@ export default defineComponent({
     },
     loading: { type: Boolean },
   },
-  setup() {
+  setup(props, { emit }) {
     const onItemSelect = (item: ItemInterface) => {
-      item.selected = !item.selected;
-      console.log("onItemSelect", item.id, item.selected);
+      emit("selectItem", item);
     };
 
     return {

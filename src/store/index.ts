@@ -2,7 +2,7 @@
  * @Author: wangyunbo
  * @Date: 2021-09-17 09:06:34
  * @LastEditors: wangyunbo
- * @LastEditTime: 2021-09-24 08:55:41
+ * @LastEditTime: 2021-09-24 14:22:36
  * @FilePath: \my-vue3-project\src\store\index.ts
  * @Description: file content
  */
@@ -24,6 +24,19 @@ export default createStore({
     loadedItems(state: ItemsStateInterface, items: ItemInterface[]) {
       state.items = items;
       state.loading = false;
+    },
+    selectItem(
+      state: ItemsStateInterface,
+      params: {
+        id: number;
+        selected: boolean;
+      }
+    ) {
+      const { id, selected } = params;
+      const item = state.items.find((o) => o.id === id);
+      if (item) {
+        item.selected = selected;
+      }
     },
   },
   actions: {
@@ -52,6 +65,9 @@ export default createStore({
       setTimeout(() => {
         commit("loadedItems", mockItems);
       }, 1000);
+    },
+    selectItem({ commit }, params: { id: number; selected: boolean }) {
+      commit("selectItem", params);
     },
   },
   modules: {},

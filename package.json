@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "cross-env VUE_APP_API_CLIENT=mock vue-cli-service serve --mode development",
-    "build": "cross-env VUE_APP_CONFIG=live vue-cli-service build --mode production",
+    "build": "cross-env VUE_APP_API_CLIENT=live vue-cli-service build --mode production",
     "build-mock": "cross-env VUE_APP_CONFIG=mock vue-cli-service build --mode production",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"

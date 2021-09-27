@@ -2,13 +2,14 @@
  * @Author: wangyunbo
  * @Date: 2021-09-17 09:06:34
  * @LastEditors: wangyunbo
- * @LastEditTime: 2021-09-24 14:22:36
+ * @LastEditTime: 2021-09-27 18:38:27
  * @FilePath: \my-vue3-project\src\store\index.ts
  * @Description: file content
  */
 import { createStore } from "vuex";
 import { ItemInterface } from "@/models/items/Item.interface";
 import { ItemsStateInterface } from "@/models/store/ItemsState.interface";
+import apiClient from "@/api-client";
 
 const state: ItemsStateInterface = {
   loading: false,
@@ -43,27 +44,10 @@ export default createStore({
     loadItems({ commit, state }) {
       commit("loadingItems");
 
-      // mock some data
-      const mockItems: ItemInterface[] = [
-        {
-          id: 1,
-          name: "Item 1",
-          selected: false,
-        },
-        {
-          id: 2,
-          name: "Item 2",
-          selected: false,
-        },
-        {
-          id: 3,
-          name: "Item 3",
-          selected: false,
-        },
-      ];
-
       setTimeout(() => {
-        commit("loadedItems", mockItems);
+        apiClient.items.fetchItems().then((data: ItemInterface[]) => {
+          commit("loadedItems", data);
+        });
       }, 1000);
     },
     selectItem({ commit }, params: { id: number; selected: boolean }) {

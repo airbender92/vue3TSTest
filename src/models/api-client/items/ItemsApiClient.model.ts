@@ -2,11 +2,11 @@
  * @Author: wangyunbo
  * @Date: 2021-09-24 14:40:28
  * @LastEditors: wangyunbo
- * @LastEditTime: 2021-09-24 14:53:08
+ * @LastEditTime: 2021-09-30 09:37:31
  * @FilePath: \my-vue3-project\src\models\api-client\items\ItemsApiClient.model.ts
  * @Description: file content
  */
-import axios, { AxiosRequestConfig, AxiosError, AxiosResponse } from "axios";
+import { HttpClient, HttpRequestParamsInterface } from "@/models/http-client";
 
 import { ItemsApiClientUrlsInterface } from "./ItemsApiClientUrls.interface";
 import { ItemsApiClientInterface } from "./ItemsApiClient.interface";
@@ -20,21 +20,10 @@ export class ItemsApiClientModel implements ItemsApiClientInterface {
   }
 
   fetchItems(): Promise<ItemInterface[]> {
-    return new Promise<ItemInterface[]>((resolve) => {
-      const url = this.urls.fetchItems;
-
-      const options: AxiosRequestConfig = {
-        headers: {},
-      };
-
-      axios
-        .get(url, options)
-        .then((response: AxiosResponse) => {
-          resolve(response.data as ItemInterface[]);
-        })
-        .catch((error: any) => {
-          console.error("ItemsApiClient: HttpClient: Get: error", error);
-        });
-    });
+    const getParameters: HttpRequestParamsInterface = {
+      url: this.urls.fetchItems,
+      requiresToken: false,
+    };
+    return HttpClient.get<ItemInterface[]>(getParameters);
   }
 }

@@ -1,9 +1,9 @@
 /*
  * @Author: wangyunbo
- * @Date: 2021-09-22 09:02:43
+ * @Date: 2021-10-08 09:25:36
  * @LastEditors: wangyunbo
- * @LastEditTime: 2021-09-22 09:04:31
- * @FilePath: \my-vue3-project\src\models\store\ItemsState.interface.ts
+ * @LastEditTime: 2021-10-08 09:42:46
+ * @FilePath: \my-vue3-project\src\models\store\items\ItemsState.interface.ts
  * @Description: file content
  */
 import { ItemInterface } from "@/models/items/Item.interface";

@@ -2,7 +2,7 @@
  * @Author: wangyunbo
  * @Date: 2021-09-17 09:06:34
  * @LastEditors: wangyunbo
- * @LastEditTime: 2021-10-09 10:03:57
+ * @LastEditTime: 2021-10-09 18:14:29
  * @FilePath: \my-vue3-project\src\main.ts
  * @Description: file content
  */
@@ -10,5 +10,12 @@ import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
 import { rootStore } from "./store";
+import { i18n } from "./plugins/vue-i18n-next-plugin";
+import { FlagIconsScss } from "@/plugins/flags-icons";
 
-createApp(App).use(rootStore).use(router).mount("#app");
+createApp(App)
+  .use(rootStore)
+  .use(router)
+  .use(i18n)
+  .use(FlagIconsScss)
+  .mount("#app");

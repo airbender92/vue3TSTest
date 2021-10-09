@@ -2,22 +2,32 @@
  * @Author: wangyunbo
  * @Date: 2021-10-09 09:30:04
  * @LastEditors: wangyunbo
- * @LastEditTime: 2021-10-09 10:10:04
+ * @LastEditTime: 2021-10-09 17:42:11
  * @FilePath: \my-vue3-project\src\store\root\index.ts
  * @Description: file content
  */
 import { createStore, StoreOptions } from "vuex";
 
-import { RootStateInterface, RootStoreModel } from "@/models/store";
+import {
+  RootStateInterface,
+  RootStoreModel,
+  RootStoreInterface,
+  StoreModuleNames,
+  MutationType,
+  ItemsStateInterface,
+  LocalesStateInterface,
+} from "@/models/store";
 
 import { initialRootState } from "./initialState";
 
 import { itemsState } from "@/store/items/module";
+import { localesState } from "@/store/locales/module";
 
 const storeOptions: StoreOptions<RootStateInterface> = {
   state: initialRootState,
   modules: {
     itemsState,
+    localesState,
   },
 };
 

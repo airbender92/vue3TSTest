@@ -2,7 +2,7 @@
  * @Author: wangyunbo
  * @Date: 2021-10-08 09:05:39
  * @LastEditors: wangyunbo
- * @LastEditTime: 2021-10-09 09:40:41
+ * @LastEditTime: 2021-10-09 17:13:03
  * @FilePath: \my-vue3-project\src\models\store\index.ts
  * @Description: file content
  */
@@ -14,6 +14,7 @@ import { RootStoreInterface } from "./root/RootStore.interface";
 import { RootStoreModel } from "./root/RootStore.model";
 
 import { ItemsStateInterface } from "./items/ItemsState.interface";
+import { LocalesStateInterface } from "./locales/LocalesState.interface";
 
 export {
   MutationType,
@@ -22,4 +23,5 @@ export {
   RootStoreInterface,
   RootStoreModel,
   ItemsStateInterface,
+  LocalesStateInterface,
 };

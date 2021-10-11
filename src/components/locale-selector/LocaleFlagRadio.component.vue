@@ -2,7 +2,7 @@
  * @Author: wangyunbo
  * @Date: 2021-10-09 17:49:39
  * @LastEditors: wangyunbo
- * @LastEditTime: 2021-10-09 17:56:00
+ * @LastEditTime: 2021-10-11 09:30:22
  * @FilePath: \my-vue3-project\src\components\locale-selector\LocaleFlagRadio.component.vue
  * @Description: file content
 -->
@@ -17,7 +17,6 @@
       class="icon-button"
       name="locale"
       :value="localeInfo.selected"
-      v-model="localeInfo.selected"
       @click="onClick"
     />
   </label>

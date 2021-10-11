@@ -2,7 +2,7 @@
  * @Author: wangyunbo
  * @Date: 2021-10-09 17:16:33
  * @LastEditors: wangyunbo
- * @LastEditTime: 2021-10-09 17:40:09
+ * @LastEditTime: 2021-10-11 09:28:48
  * @FilePath: \my-vue3-project\src\store\locales\index.ts
  * @Description: file content
  */
@@ -12,7 +12,7 @@ import {
   StoreModuleNames,
   LocalesStateInterface,
 } from "@/models/store";
-import LocalStorageKeys from "@/models/local-storage/LocalStorageKeys";
+// import LocalStorageKeys from "@/models/local-storage/LocalStorageKeys";
 
 const localesStore = {
   get state(): LocalesStateInterface {

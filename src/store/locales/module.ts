@@ -2,7 +2,7 @@
  * @Author: wangyunbo
  * @Date: 2021-10-09 17:20:52
  * @LastEditors: wangyunbo
- * @LastEditTime: 2021-10-09 17:29:35
+ * @LastEditTime: 2021-10-11 09:01:33
  * @FilePath: \my-vue3-project\src\store\locales\module.ts
  * @Description: file content
  */
@@ -24,7 +24,7 @@ export const mutations: MutationTree<LocalesStateInterface> = {
     state.availableLocales.forEach((localeInfo) => {
       localeInfo.selected = localeInfo.locale === localeId;
       if (localeInfo.selected) {
-        i18n.global.locale.value = localeInfo.locale;
+        i18n.global.locale = localeInfo.locale;
       }
     });
   },

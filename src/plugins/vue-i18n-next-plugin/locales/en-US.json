@@ -1,0 +1,7 @@
+{
+  "messages": {
+    "en-US": {
+      "welcome": "Welcome: this message is localized in English"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "messages": {
+    "fr-FR": {
+      "welcome": "Bienvenue: this message is localized in French"
+    }
+  }
+}

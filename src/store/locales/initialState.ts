@@ -2,7 +2,7 @@
  * @Author: wangyunbo
  * @Date: 2021-10-09 17:16:44
  * @LastEditors: wangyunbo
- * @LastEditTime: 2021-10-09 17:20:33
+ * @LastEditTime: 2021-10-12 08:56:23
  * @FilePath: \my-vue3-project\src\store\locales\initialState.ts
  * @Description: file content
  */
@@ -37,7 +37,7 @@ export const initialLocalesState: LocalesStateInterface = {
     {
       name: "中文",
       locale: "zh-CN",
-      flag: "zh",
+      flag: "cn",
       selected: false,
     },
   ],

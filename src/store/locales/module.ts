@@ -2,12 +2,12 @@
  * @Author: wangyunbo
  * @Date: 2021-10-09 17:20:52
  * @LastEditors: wangyunbo
- * @LastEditTime: 2021-10-11 09:01:33
+ * @LastEditTime: 2021-10-18 16:19:24
  * @FilePath: \my-vue3-project\src\store\locales\module.ts
  * @Description: file content
  */
-
-import { Module, MutationTree, ActionTree, GetterTree, Action } from "vuex";
+/* eslint-disable no-debugger */
+import { Module, MutationTree, ActionTree, GetterTree } from "vuex";
 
 import {
   MutationType,

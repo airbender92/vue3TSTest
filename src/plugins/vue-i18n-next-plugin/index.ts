@@ -2,7 +2,7 @@
  * @Author: wangyunbo
  * @Date: 2021-10-09 15:42:06
  * @LastEditors: wangyunbo
- * @LastEditTime: 2021-10-14 09:49:38
+ * @LastEditTime: 2021-10-19 15:32:12
  * @FilePath: \my-vue3-project\src\plugins\vue-i18n-next-plugin\index.ts
  * @Description: file content
  */
@@ -36,9 +36,9 @@ const getLocalesData = (): LocalesDataInterface => {
 };
 
 const data = getLocalesData();
-
+console.log("data", data);
 export const i18n = createI18n({
-  locale: "zh-CN",
+  locale: "it-IT",
   fallbackLocale: "en-US",
   messages: data.messages,
 });

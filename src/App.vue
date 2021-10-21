@@ -2,7 +2,7 @@
  * @Author: wangyunbo
  * @Date: 2021-09-17 09:06:34
  * @LastEditors: wangyunbo
- * @LastEditTime: 2021-10-09 18:20:47
+ * @LastEditTime: 2021-10-21 09:04:03
  * @FilePath: \my-vue3-project\src\App.vue
  * @Description: file content
 -->
@@ -40,6 +40,7 @@ export default defineComponent({
       return localesStore.state.availableLocales;
     });
     const onLocaleClicked = (localeInfo: LocalInfoInterface) => {
+      console.log("localInfo: ", localeInfo);
       localesStore.action(MutationType.locales.selectLocale, localeInfo.locale);
     };
     return {

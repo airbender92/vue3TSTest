@@ -1,7 +1,5 @@
 {
   "messages": {
-    "es-ES": {
       "welcome": "Bienvenido: this message is localized in Spanish"
-    }
   }
 }

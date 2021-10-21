@@ -1,5 +1,9 @@
 {
   "messages": {
-      "welcome": "Bienvenido: this message is localized in Spanish"
+      "welcome": "Bienvenido: this message is localized in Spanish",
+      "navigation": {
+        "home": "Inicio",
+        "about": "Acerca de"
+      }
   }
 }

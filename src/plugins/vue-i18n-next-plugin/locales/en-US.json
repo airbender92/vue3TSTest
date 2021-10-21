@@ -1,5 +1,6 @@
 {
   "messages": {
-      "welcome": "Welcome: this message is localized in English"
+      "welcome": "Welcome: this message is localized in English",
+      "navigation": { "home": "Home", "about": "About" }
   }
 }

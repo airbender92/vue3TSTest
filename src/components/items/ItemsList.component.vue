@@ -2,13 +2,14 @@
  * @Author: wangyunbo
  * @Date: 2021-09-18 15:14:31
  * @LastEditors: wangyunbo
- * @LastEditTime: 2021-09-24 14:12:32
+ * @LastEditTime: 2021-10-26 15:46:48
  * @FilePath: \my-vue3-project\src\components\items\ItemsList.component.vue
  * @Description: file content
 -->
 <template>
   <div>
     <h3>Items ---- loading: {{ loading }}:</h3>
+    <h3>{{ i18n.t("items.list.header") }}</h3>
     <Loader v-show="loading" />
     <ul v-show="!loading">
       <item-component
@@ -25,6 +26,7 @@ import { defineComponent, PropType } from "vue";
 import { ItemInterface } from "@/models/items/Item.interface";
 import ItemComponent from "./children/Item.component.vue";
 import Loader from "@/components/shared/Loader.component.vue";
+import { useI18n } from "vue-i18n";
 
 export default defineComponent({
   components: { ItemComponent, Loader },
@@ -38,9 +40,10 @@ export default defineComponent({
     const onItemSelect = (item: ItemInterface) => {
       emit("selectItem", item);
     };
-
+    const i18n = useI18n();
     return {
       onItemSelect,
+      i18n,
     };
   },
 });

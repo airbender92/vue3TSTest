@@ -2,12 +2,13 @@
  * @Author: wangyunbo
  * @Date: 2021-09-17 09:06:34
  * @LastEditors: wangyunbo
- * @LastEditTime: 2021-10-21 09:04:03
+ * @LastEditTime: 2021-10-26 18:05:45
  * @FilePath: \my-vue3-project\src\App.vue
  * @Description: file content
 -->
 <template>
   <div id="app">
+    <div class="long-date">{{ i18n.d(new Date(), "long") }}</div>
     <h2>{{ i18n.t("welcome") }}</h2>
     <LocaleSelector
       :availableLocales="availableLocales"
@@ -61,6 +62,9 @@ export default defineComponent({
   color: #2c3e50;
   h2 {
     margin: 0;
+  }
+  .long-date {
+    font-size: 12px;
   }
 }
 

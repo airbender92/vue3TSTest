@@ -2,7 +2,7 @@
  * @Author: wangyunbo
  * @Date: 2021-09-24 10:50:33
  * @LastEditors: wangyunbo
- * @LastEditTime: 2021-09-24 13:14:13
+ * @LastEditTime: 2021-10-29 11:16:01
  * @FilePath: \my-vue3-project\src\components\shared\Loader.component.vue
  * @Description: file content
 -->
@@ -23,46 +23,3 @@ export default defineComponent({
   },
 });
 </script>
-
-<style lang="scss">
-.loader {
-  $color: #42b983;
-  $width: 30px;
-  $height: 30px;
-  $bounceHeight: 60px;
-  display: inline-block;
-
-  .bounceball {
-    position: relative;
-    width: $width;
-    &::before {
-      position: absolute;
-      content: "";
-      top: 0;
-      width: $width;
-      height: $height;
-      border-radius: 50%;
-      background-color: $color;
-      transform-origin: 50%;
-      animation: bounce 500ms alternate infinite ease;
-    }
-  }
-
-  @keyframes bounce {
-    0% {
-      top: $bounceHeight;
-      height: 10px;
-      border-radius: 60px 60px 20px 20px;
-      transform: scaleX(2);
-    }
-    25% {
-      height: $height;
-      border-radius: 50%;
-      transform: scaleX(1);
-    }
-    100% {
-      top: 0;
-    }
-  }
-}
-</style>

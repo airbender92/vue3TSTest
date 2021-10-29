@@ -2,7 +2,7 @@
  * @Author: wangyunbo
  * @Date: 2021-10-09 17:42:51
  * @LastEditors: wangyunbo
- * @LastEditTime: 2021-10-09 17:48:51
+ * @LastEditTime: 2021-10-29 11:15:31
  * @FilePath: \my-vue3-project\src\components\locale-selector\LocaleSelector.component.vue
  * @Description: file content
 -->
@@ -45,23 +45,3 @@ export default defineComponent({
   },
 });
 </script>
-<style lang="scss">
-.locale-selector {
-  display: inline-flex;
-  .locale-radio-group {
-    display: inline-flex;
-    justify-content: center;
-    label.locale-radio {
-      cursor: pointer;
-      display: block;
-      padding: 5px;
-      &.selected {
-        border-bottom: solid 5px #42b983;
-      }
-    }
-    input {
-      display: none;
-    }
-  }
-}
-</style>

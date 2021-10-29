@@ -2,7 +2,7 @@
  * @Author: wangyunbo
  * @Date: 2021-09-18 16:17:17
  * @LastEditors: wangyunbo
- * @LastEditTime: 2021-09-24 14:23:46
+ * @LastEditTime: 2021-10-29 11:15:11
  * @FilePath: \my-vue3-project\src\components\items\children\Item.component.vue
  * @Description: file content
 -->
@@ -42,33 +42,3 @@ export default defineComponent({
   },
 });
 </script>
-
-<style lang="scss">
-li.item {
-  padding: 0;
-  outline: solid 1px #eee;
-  display: grid;
-  grid-template-columns: 1.7em auto;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  .name {
-    padding: 5px;
-    text-align: left;
-  }
-  .selected-indicator {
-    padding: 5px;
-    font-size: 3em;
-    line-height: 0.5em;
-    padding: 5px;
-    color: lightgray;
-  }
-  &.selected {
-    .selected-indicator {
-      color: skyblue;
-    }
-  }
-  &:hover {
-    background-color: #eee;
-  }
-}
-</style>

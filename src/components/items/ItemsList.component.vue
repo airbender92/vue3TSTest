@@ -2,7 +2,7 @@
  * @Author: wangyunbo
  * @Date: 2021-09-18 15:14:31
  * @LastEditors: wangyunbo
- * @LastEditTime: 2021-10-26 15:46:48
+ * @LastEditTime: 2021-10-29 11:14:36
  * @FilePath: \my-vue3-project\src\components\items\ItemsList.component.vue
  * @Description: file content
 -->
@@ -48,13 +48,3 @@ export default defineComponent({
   },
 });
 </script>
-<style lang="scss">
-ul {
-  list-style-type: none;
-  margin-block-start: 0;
-  margin-block-end: 0;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  padding-inline-start: 0px;
-}
-</style>

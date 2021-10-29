@@ -2,7 +2,7 @@
  * @Author: wangyunbo
  * @Date: 2021-09-17 09:06:34
  * @LastEditors: wangyunbo
- * @LastEditTime: 2021-10-29 11:32:28
+ * @LastEditTime: 2021-10-29 13:03:06
  * @FilePath: \my-vue3-project\src\App.vue
  * @Description: file content
 -->
@@ -55,32 +55,3 @@ export default defineComponent({
   },
 });
 </script>
-
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  h2 {
-    margin: 0;
-  }
-  .long-date {
-    font-size: 12px;
-  }
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
-</style>

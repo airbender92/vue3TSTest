@@ -2,7 +2,7 @@
  * @Author: wangyunbo
  * @Date: 2021-09-17 09:06:34
  * @LastEditors: wangyunbo
- * @LastEditTime: 2021-10-26 18:05:45
+ * @LastEditTime: 2021-10-29 11:32:28
  * @FilePath: \my-vue3-project\src\App.vue
  * @Description: file content
 -->
@@ -14,6 +14,7 @@
       :availableLocales="availableLocales"
       @clicked="onLocaleClicked"
     />
+    <ThemeSelector />
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
@@ -28,11 +29,13 @@ import { MutationType } from "@/models/store";
 import { useLocalesStore } from "@/store/locales";
 import { LocalInfoInterface } from "@/models/localization/LocaleInfo.interface";
 import LocaleSelector from "@/components/locale-selector/LocaleSelector.component.vue";
+import ThemeSelector from "@/components/theme-selector/ThemeSelector.component.vue";
 
 export default defineComponent({
   name: "App",
   components: {
     LocaleSelector,
+    ThemeSelector,
   },
   setup() {
     const i18n = useI18n();

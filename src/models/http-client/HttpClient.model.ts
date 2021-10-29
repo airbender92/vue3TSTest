@@ -2,21 +2,19 @@
  * @Author: wangyunbo
  * @Date: 2021-09-28 08:57:50
  * @LastEditors: wangyunbo
- * @LastEditTime: 2021-09-28 10:50:27
+ * @LastEditTime: 2021-10-29 10:26:17
  * @FilePath: \my-vue3-project\src\models\http-client\HttpClient.model.ts
  * @Description: file content
  */
 import axios, { AxiosRequestConfig, AxiosResponse } from "axios";
+import { config } from "@/config";
 
 import { HttpRequestParamsInterface } from "./HttpRequestParams.interface";
 import { HttpClientInterface } from "./HttpClient.interface";
 
 export class HttpClientModel implements HttpClientInterface {
   private getToken(): string {
-    const TOKEN_KEY =
-      process.env && process.env.VUE_APP_TOKEN_KEY
-        ? process.env.VUE_APP_TOKEN_KEY
-        : "myapp-token";
+    const TOKEN_KEY = config.httpClient.tokenKey || "myapp-token";
     return localStorage.getItem(TOKEN_KEY) || "";
   }
 
